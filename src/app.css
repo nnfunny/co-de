@@ -1,7 +1,25 @@
 :root {
   font-size: 62.5%;
-
   color-scheme: light dark;
+
+  --light-primary: #fafafa;
+  --light-secondary: #252525;
+
+  --dark-primary: #252525;
+  --dark-secondary: #fafafa;
+
+  --clr-black30: rgba(0, 0, 0, 0.3);
+  --clr-white30: rgba(255, 255, 255, 0.3);
+
+  --font-size-20: 20rem;
+  --font-size-18: 18rem;
+  --font-size-16: 16rem;
+  --font-size-14: 14rem;
+  --font-size-12: 12rem;
+  --font-size-10: 10rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 }
 
 /* Use a more-intuitive box-sizing model. */
