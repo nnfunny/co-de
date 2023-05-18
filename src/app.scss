@@ -2,14 +2,17 @@
   font-size: 62.5%;
   color-scheme: light dark;
 
-  --light-primary: #fafafa;
-  --light-secondary: #252525;
+  --ON: initial;
+  --OFF: ;
 
-  --dark-primary: #252525;
-  --dark-secondary: #fafafa;
+  /* Light mode by default */
+  --light: var(--ON);
+  --dark: var(--OFF);
 
-  --clr-black30: rgba(0, 0, 0, 0.3);
-  --clr-white30: rgba(255, 255, 255, 0.3);
+  --color-background: var(--light, #fafafa) var(--dark, #252525);
+  --color-text: var(--light, #252525) var(--dark, #fafafa);
+  --color-text-subtle: var(--light, rgba(0, 0, 0, 0.3))
+    var(--dark, rgba(255, 255, 255, 0.3));
 
   --font-size-20: 20rem;
   --font-size-18: 18rem;
@@ -20,6 +23,25 @@
 
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+
+  --color-transition: color 0.2s ease-out, background 0.2s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light: var(--OFF);
+    --dark: var(--ON);
+  }
+}
+
+.dark-mode {
+  --light: var(--OFF);
+  --dark: var(--ON);
+}
+
+.light-mode {
+  --light: var(--ON);
+  --dark: var(--OFF);
 }
 
 /* Use a more-intuitive box-sizing model. */
